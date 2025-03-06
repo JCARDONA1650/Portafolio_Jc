@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <section class="hero-section container-fluid d-flex align-items-center  ">
+    <div class="div-hero-text container col-8 justify-content-center align-items-center">
+    <h2>Hola <strong>!!</strong>  Soy <strong>Jorge Cardona</strong></h2>
+    <h3>Ingeniero de sistemas</h3>
+    <p>Conoce mis servicios</p>
+    </div>
+    <div class="div-hero-img container-fluid col-4 justify-content-center align-items-center text-center">
+        <img src="{% static 'img/jorge.jpg' %}" alt="foto de rostro Jorge Cardona" class="imagen-principal">
+        <p>Imagen Generada IA</p>
+    </div>
+</section>
+<div class="hero-boton d-flex align-items-center justify-content-center">
+    <button type="button" class="btn-hero btn btn-outline-success" onclick="window.location.href='{% url 'info' %}'">
+        Informacion</button>
+</div>
+
+
+{% endblock%}

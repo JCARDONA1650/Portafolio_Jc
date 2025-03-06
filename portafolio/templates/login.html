@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 class="tituloPrin container-fluid d-flex justify-content-center">LOGIN</h1>
+
+
+{% if messages %}
+    <div class="container">
+        {%for message in messages %}
+        <div class="alert {% if message.tags == 'success' %}
+        alert-success
+        {% else %}
+        alert-danger
+        {% endif %}" role="alert">
+            {{ message }}>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+
+<div class="d-flex justify-content-center align-items-center mb-3">
+<form method="POST" class="login container  border rounded p-2 text-dark bg-light w-50">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-success align-items-center justify-content-center">Login</button>
+    </div>
+</form>
+</div>
+<a href="{% url 'registro' %}">¿No tienes cuenta? Regístrate</a>
+
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 class="tituloPrin container-fluid d-flex justify-content-center"> <strong class="welcome"> BIENVENIDO!</strong>&nbsp; {{request.user.username}} </h1>
+<br>
+<section class="container-fluid">
+    <div class="container d-flex">
+        <!-- Primera fila con contenido -->
+        <div class=" row">
+            <div class="col-12">
+                <p>Al Iniciar Sesión podrás tener acceso a contenido adicional como:</p>
+                <ul>
+                    <li><strong>Blog:</strong> Lee sobre tecnología y comenta.</li>
+                    <li><strong>Código:</strong> Accede al repositorio GitHub.</li>
+                    <li><strong>WorkSpace:</strong> Encuentra ofertas de trabajo freelance.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Segunda fila con imagen -->
+        <div class="row ">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+
+                    <img class="img_us w-50 p-1 mb-3 border rounded" src="{% static 'img/img_home_us.jpeg' %}" alt="Imagen con efecto neón">
+          
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

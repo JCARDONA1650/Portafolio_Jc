@@ -5,14 +5,15 @@
 
 <h1 class="tituloPrin container-fluid d-flex justify-content-center ">REGISTRO DE USUARIO</h1>
 
-<div class="d-flex justify-content-center align-items-center mb-3">
-<form method="POST" class="login container border rounded p-2 text-dark bg-light w-50">
+<div class="d-flex container justify-content-center align-items-center mb-3">
+<form method="POST" class="login container border rounded p-2 text-dark bg-light "
+style="max-width: 420px; width: 90%;">
     {% csrf_token %}
     <div class="row">
     {% if form.errors %}
     <div class="alert alert-danger">
         <strong>¡Error!</strong> Revisa los siguientes problemas:
-        <ul class="col-md-8 col-12 text-md-end text-start">
+        <ul class=" col-md-8 col-12 text-md-end text-start ali">
             {% for field in form %}
                 {% if field.errors %}
                     <li><strong>{{ field.label }}:</strong> 

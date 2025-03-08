@@ -5,5 +5,7 @@ services:
     repo: https://github.com/JCARDONA1650/Portafolio_Jc.git
     plan: free
     region: oregon
-    buildCommand: "./build.sh"
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput  # Agregar esta línea
     startCommand: "gunicorn MI_PORTAFOLIO.wsgi:application --bind 0.0.0.0:8000"

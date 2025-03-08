@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<h1 class="tituloPrin container-fluid d-flex justify-content-center ">REGISTRO DE USUARIO</h1>
+
+<div class="d-flex justify-content-center align-items-center mb-3">
+<form method="POST" class="login container border rounded p-2 text-dark bg-light w-50">
+    {% csrf_token %}
+
+    {% if form.errors %}
+    <div class="alert alert-danger">
+        <strong>¡Error!</strong> Revisa los siguientes problemas:
+        <ul>
+            {% for field in form %}
+                {% if field.errors %}
+                    <li><strong>{{ field.label }}:</strong> 
+                        {% for error in field.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+
+
+    {% if messages %}
+        {%for mensaje in messages%}
+            <div class="alert-success text-success">{{message}} </div> 
+        {% endfor %} 
+    {% endif %}
+
+    {{ form.as_p}} 
+    <div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-success align-items-center">Registrarse</button>
+    </div>
+</form>
+</div>
+
+{% endblock content %}

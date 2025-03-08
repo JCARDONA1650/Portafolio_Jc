@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<section class=" container-fluid m-0 ">
+    <div class="row d-none d-md-block p-0">
+        <div class=" container-fluid col-12 p-0 m-0">
+            <img class="img-fluid banner-img w-100"style="height: 350px; object-fit: cover;"src="{%static  'img/banner_info.jpg'%}" alt="imagen Banner de tecnologia como representacion de la seccion">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h1 class="tituloPrin">Experiencia </h1>
+            <p>Me encuentro en  7 semestre de la carrera de ingenieria de sistemas ,en la Universidad Nacionional a Distancia UNAD, en colombia.</p>
+            <p>+2 años experiencia Tecnico en sistemas, cumpliendo tareas de mantenimiento, Backups , Administracion y gestion de Correos entre otros.</p>
+            <p>+2 años Creacion y administracion de pagina web por WordPress.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid bg-success text-light border mt-3 mb-3 p-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Columna 1: Título -->
+            <div class="col-md-4 text-center">
+                <h2>Habilidades</h2>
+            </div>
+
+            <!-- Columna 2: Lista -->
+            <div class="col-md-4">
+                <h3 class="mb-3">BASES DE DATOS</h3>
+                <ul class="list-unstyled">
+                    <li>Mongo DB</li>
+                    <li>SQL Management Server</li>
+                    <li>SQL Postgres</li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Imagen con hover animado -->
+            <div class="col-md-4 text-center">
+                <div class="position-relative overflow-hidden imagen-wrapper">
+                    <img src="{% static 'img/bd.jpg' %}" class="img-fluid rounded shadow-lg hover-shrink" alt="Imagen de prueba">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Efecto de hover para reducir tamaño de la imagen */
+    .hover-shrink {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .hover-shrink:hover {
+        transform: scale(0.9); /* Reduce al 90% de su tamaño */
+    }
+</style>
+
+
+
+<ul> 
+    <h3>CONOCIEMIENTOS TECNICO SISTEMAS</h3>  
+    <br> 
+    <li>Mantenimiento Preventivo.</li>
+    <li>Backups Equipos Hogar y Empresas.</li>
+    <li>Administracion de Correos Corporativos.</li>
+    <li>Soporte tecnico Mesa de ayuda.</li>
+    <li>Cambio de Disco.</li>
+    <li>Instalacion de sistemas Operativos y Herraientas Ofimaticas.</li>
+</ul>
+<br>
+
+<section class="container-fluid  bg-success text-light align-items-center  justify-content-end border m-2 py-4">
+    <div class="container">
+        <div class="row  " >
+            <div class="col-12 text-center">
+                <ul class="lista text-center list-unstyled"> 
+                    <h3>PROGRAMACION WEB</h3>  
+                    <br> 
+                    <li>Bases Python</li>
+                    <li>Framework DJANGO</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Boostrap</li>
+                    <li>Bases Git y GitHub</li>
+                    <li>WordPress</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container-fluid  m-2 py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Columna 1: Imagen -->
+            <div class="col-md-6 text-center">
+                <img src="{% static 'img/ing.jpg' %}" class="img-fluid rounded hover-shrink" alt="Imagen de perfil">
+            </div>
+
+            <!-- Columna 2: Lista de habilidades -->
+            <div class="col-md-6">
+                <h3 class="text-end">OTRAS HABILIDADES</h3>
+                <ul class="lista list-unstyled text-end">
+                    <li>Conocimiento uso de Jira</li>
+                    <li>Mail Zimbra</li>
+                    <li>PANACEA (software salud)</li>
+                    <li>BIZAGY</li>
+                    <li>NOTION</li>
+                    <li>REPORT BUILDER</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock content %}

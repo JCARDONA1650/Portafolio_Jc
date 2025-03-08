@@ -1,0 +1,190 @@
+/* ======== ESTILOS GENERALES ======== */
+* {
+    font-family: "sansita", sans-serif;
+}
+
+body {
+    background: black !important;
+    color: blanchedalmond !important;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======== TIPOGRAFÍA Y TEXTOS ======== */
+.tituloPrin {
+    color: #198754;
+}
+
+strong {
+    color: #198754;
+}
+
+strong:hover {
+    color: blueviolet;
+    transform: translateX(5px);
+}
+
+h3:hover {
+    color: blueviolet;
+}
+h3.h3-ambu {
+    color:#198754 !important;
+}
+
+h3.h3-ambu:hover {
+    color: rgb(98, 5, 5) !important;
+}
+
+/* ======== IMÁGENES ======== */
+.imagen-principal {
+    width: 100%;   /* Ajusta al 100% del contenedor */
+    height: 100%;  /* Ajusta al 100% del contenedor */
+    padding: 5px;
+    margin: auto;
+    object-fit: cover;  /* Mantiene el recorte sin distorsionar */
+    transition: transform 0.3s ease; /* Añade suavidad en la transición */
+}
+
+.imagen-principal:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease-in-out !important; /* Efecto de escala en hover */
+}
+
+.imagen-wrapper:hover .hover-scale {
+    transform: scale(1.1) !important; /* Se agranda un 10% */
+}
+img.img-ambugroup{
+    transition: 2s;
+}
+img.img-ambugroup:hover{
+    transform: rotate(360deg);
+}
+
+.imagen-contacto img {
+    transition: transform 0.5s ease-in-out;
+}
+.imagen-contacto img:hover {
+    transform: scale(1.4) translate(-725px ) ;
+}
+/* ======== LOGIN ======== */
+@keyframes girar-horizontal {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.img-login {
+    animation: girar-horizontal 2s linear infinite; /* Se repite sin parar */
+}
+/* ======== REGISTRO EXITOSO RELOJ ======== */
+@keyframes girar-reloj {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.reloj {
+    animation: girar-reloj 2s linear infinite; /* Se repite sin parar */
+}
+
+/* ======== TEXTO BIENVENIDO LOGIN ======== */
+@keyframes cambiarcolor{
+    0%{
+        color:#198754;
+    }
+
+    50%{
+        color:blueviolet;
+    }
+    100%{
+        color:#198754;
+    }
+
+}
+.welcome{
+    animation: cambiarcolor 2s infinite alternate;
+}
+
+/* ======== IMAGEN HOME US ======== */
+@media (max-width: 530px) {
+    .img_us {
+        display: none; /* Oculta la imagen */
+    }
+}
+
+
+/* ======== SECCIÓN HERO ======== */
+.hero-section {
+    width: 800px !important;
+    height: 400px !important;
+    margin-top: 10px !important;
+    padding: 20px;
+}
+
+@media (max-width: 820px) {
+    .hero-section {
+        width: 300px !important;
+        height: 400px !important;
+        padding: 10px !important;
+        margin-top: 100px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-section {
+        width: 200px !important;
+        height: 300px !important;
+        padding: 5px !important;
+        margin-top: 70px !important;
+    }
+}
+
+/* ======== BOTONES ======== */
+.hero-boton {
+    margin: 1em;
+    padding: 5px;
+}
+
+@media (max-width: 360px) {
+    .hero-boton {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-top: 50px !important;
+    }
+}
+
+.btn-hero {
+    transition: 2s;
+}
+
+.btn-hero:hover {
+    background: blueviolet !important;
+    border: 2px solid white !important;
+}
+
+/* ======== ALINEACIÓN DE ELEMENTOS ======== */
+.col-md-4.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ======== LABELS ======== */
+
+/* ======== FOOTER ======== */
+@media (max-width: 650px) {
+    .footer-copy h5, .footer-copy p, .d-flex a {
+        font-size: 5px; /* Ajusta el tamaño de la fuente en el footer */
+    }
+}
+
+

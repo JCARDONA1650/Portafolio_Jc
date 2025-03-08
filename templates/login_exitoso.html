@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<title>Login Exitoso</title>
+<script>
+    // Redirigir después de 3 segundos
+    setTimeout(function() {
+        window.location.href = "{% url 'home_us' %}";
+    }, 3000);
+</script>
+</head>
+<br>
+<div class="container text-center">
+    <div class="alert alert-success">
+        <h2>🎉 Login Exitoso!</h2>
+        <p><div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>&nbsp;Serás redirigido a tu home de usuario en unos segundos...</p>
+    </div>
+</div>
+
+{% endblock content %}

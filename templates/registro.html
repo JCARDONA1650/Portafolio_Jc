@@ -8,11 +8,11 @@
 <div class="d-flex justify-content-center align-items-center mb-3">
 <form method="POST" class="login container border rounded p-2 text-dark bg-light w-50">
     {% csrf_token %}
-
+    <div class="row">
     {% if form.errors %}
     <div class="alert alert-danger">
         <strong>¡Error!</strong> Revisa los siguientes problemas:
-        <ul>
+        <ul class="col-md-8 col-12 text-md-end text-start">
             {% for field in form %}
                 {% if field.errors %}
                     <li><strong>{{ field.label }}:</strong> 
@@ -25,7 +25,7 @@
         </ul>
     </div>
 {% endif %}
-
+</div>
 
     {% if messages %}
         {%for mensaje in messages%}

@@ -21,13 +21,22 @@
 
 
 <div class="d-flex justify-content-center align-items-center mb-3">
-<form method="POST" class="login container  border rounded p-2 text-dark bg-light w-50">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="d-flex justify-content-center">
-    <button type="submit" class="btn btn-success align-items-center justify-content-center">Login</button>
-    </div>
-</form>
+    <form method="POST" class="login container border rounded p-2 text-dark bg-light w-50">
+        {% csrf_token %}
+        <div class="row">
+            {% for field in form %}
+                <div class="col-md-4 col-12 text-md-end text-start">
+                    <label for="{{ field.id_for_label }}" class="col-form-label">{{ field.label }}</label>
+                </div>
+                <div class="col-md-8 col-12 text-md-end text-start">
+                    {{ field }}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            <button type="submit" class="btn btn-success">Login</button>
+        </div>
+    </form>
 </div>
 <a href="{% url 'registro' %}">¿No tienes cuenta? Regístrate</a>
 

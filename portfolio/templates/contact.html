@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section contact-section">
+  <h1 class="section-title" data-aos="fade-down">
+    <i class="fas fa-address-book"></i> Información de Contacto
+  </h1>
+
+  <p class="contact-description" data-aos="fade-up">
+    Estoy disponible para oportunidades laborales, proyectos freelance, desarrollo de software 
+    y colaboraciones tecnológicas. Puedes contactarme a través de los siguientes canales. 
+    Responderé en el menor tiempo posible.
+  </p>
+
+  <div class="contact-items">
+
+    <!-- WHATSAPP -->
+    <div class="contact-item" data-aos="fade-right">
+      <i class="fa-brands fa-whatsapp"></i>
+      <div>
+        <strong>WhatsApp</strong><br>
+        <a href="https://wa.me/{{ whatsapp_link }}" target="_blank" rel="noopener">
+          {{ whatsapp }}
+        </a>
+      </div>
+    </div>
+
+    <!-- INSTAGRAM -->
+    <div class="contact-item" data-aos="fade-left">
+      <i class="fa-brands fa-instagram"></i>
+      <div>
+        <strong>Instagram</strong><br>
+        <a href="https://instagram.com/{{ instagram|slice:'1:' }}" target="_blank" rel="noopener">
+          {{ instagram }}
+        </a>
+      </div>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="contact-item" data-aos="fade-up">
+      <i class="fa-solid fa-envelope"></i>
+      <div>
+        <strong>Email</strong><br>
+        <a href="mailto:{{ email }}">{{ email }}</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="contact-cta" data-aos="zoom-in">
+    <p>
+      ¿Tienes un proyecto, una vacante o una idea en mente?  
+      Estoy abierto a trabajar en desarrollo web, automatización, soporte TI y soluciones tecnológicas.  
+      Escríbeme y construyamos algo juntos.
+    </p>
+  </div>
+
+</section>
+
+{% endblock %}

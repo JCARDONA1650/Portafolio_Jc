@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+
+  <div class="hero-content" data-aos="fade-right">
+
+    <h1 class="hero-title">
+      Hola, soy {{ name }}
+    </h1>
+
+    <h2 class="hero-subtitle">
+      {{ title }}
+    </h2>
+
+    <p class="hero-description">
+      Soy desarrollador de software enfocado en la creación de soluciones web eficientes, 
+      automatización de procesos y desarrollo de aplicaciones a medida. 
+      Tengo experiencia en tecnologías como Python, Django y desarrollo frontend, 
+      trabajando tanto en entornos empresariales como en proyectos independientes, tambien cuento con
+      conocimientos en diseño de bases de datos relacionales , trabajo con metodologías ágiles y creacion de paginas web con wordpress.
+      <br><br>
+      Me especializo en transformar ideas en sistemas funcionales, optimizando procesos 
+      y generando valor real para empresas y usuarios. Siempre estoy en constante aprendizaje 
+      y abierto a nuevos retos tecnológicos.
+    </p>
+
+    <div class="hero-buttons" data-aos="zoom-in" data-aos-delay="200">
+
+      {% if github_url %}
+        <a href="{{ github_url }}" class="btn" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> Ver GitHub
+        </a>
+      {% endif %}
+
+      {% if company_url %}
+        <a href="{{ company_url }}" class="btn secondary" target="_blank" rel="noopener">
+          <i class="fas fa-building"></i> Ver Proyecto
+        </a>
+      {% endif %}
+
+      <a href="{% url 'portfolio:contact' %}" class="btn contact-btn">
+        <i class="fas fa-paper-plane"></i> Contáctame
+      </a>
+
+    </div>
+
+  </div>
+
+<div class="hero-image-container" data-aos="fade-left">
+
+  <img
+    src="{% static 'portfolio/images/foto.jpg' %}"
+    alt="Foto normal"
+    class="hero-image img-default"
+  />
+
+  <img
+    src="{% static 'portfolio/images/foto2.png' %}"
+    alt="Foto hover"
+    class="hero-image img-hover"
+  />
+
+</div>
+</section>
+
+{% endblock %}

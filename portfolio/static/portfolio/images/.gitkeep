@@ -1,0 +1,5 @@
+/*
+This hidden file ensures that the images directory is tracked by version
+control even when it is empty. Add your own images here, such as
+profile pictures or project screenshots.
+*/
